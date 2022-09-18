@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/PART2.css">
+    <script defer src="../static/js/JavaScript.js"></script>
+        <title>RegisterPage</title>
+</head>
+
+<body>
+    <div class ="GridForm">
+        <!-- header -->
+        <div class="TopAreaContainer">
+            <div id="Logo" class="topAreaGroup">
+                <img src="../static/photos/cap.png" id="Logo" width="30" height="30">     
+            </div>
+            <figcaption>  MyLesson</figcaption>
+       </div>
+       
+
+    <nav  class="Nav1">
+            <ul>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Register.html">Sign Up</a></li>
+            </ul>
+          </nav>
+
+        
+      
+        <!-- form1 -->
+                 <form class="logINForm1" action="" method="POST"> 
+                
+                   <div class="container1"> 
+                    <h2>Sign Up</h2>
+                    <label for="RegName"><b class="register">Full Name</b></label><br>
+                    <input type="text" placeholder="Enter Name" name="RegName" id="RegName" autocomplete="on" pattern="[a-zA-Z ]{1,40}" required> <br>
+                    <label for="email"><b class="register">Email</b></label><br>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ><br> 
+                    <label for="Bday"><b class="register">Date of birth</b></label><br>
+                    <input type="date" name="Bday" id="Bday" max="2006-05-29" min="1922-01-01" required> <br>
+                    <label for="psw"><b class="register">Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" name="psw" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  onkeyup='check1();' required> <br>
+                    <label for="psw"><b class="register">Confirm Password</b></label><br>
+                    <input type="password" placeholder="Enter Password again" name="psw" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onkeyup='check1();'  required ><br>
+                    <p class="matchText"><span id="matched"></span></p> <br>
+                    <button class="button" id="SignUpButton" type="submit" formaction="../view/Login.html" ><b>Sign Up</b></button>
+                   
+                     </div> 
+                          
+            </form>
+    </div>
+</body>
+</html>

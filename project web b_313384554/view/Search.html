@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../static/css/PART2.css">
+   <script defer src="../static/js/JavaScript.js"></script>
+    
+   <title>Search</title>
+</head>
+<body>
+    
+    <div class ="GridForm">
+        <!-- header -->
+         <div class="TopAreaContainer">
+             <div id="Logo" class="topAreaGroup">
+                 <img src="../static/photos/cap.png" id="Logo" width="30" height="30">           
+                   </div>
+         <figcaption>  MyLesson</figcaption>
+        </div>
+       
+          <nav class="Nav2">
+            <ul>
+                <li><a href="Login.html">Logout</a></li>
+                <li><a href="Search.html">Search</a></li>
+            </ul>
+          </nav>
+         <!-- form1 -->
+
+         <div class="search">
+            <div class="heder1">
+                <h1>Find the tutor near you!</h1>   
+                </div>
+           
+                <form action="filteredTreatment" method="post">
+                    <select id="Subjects" list="Subjects" name="Subjects" placeholder="Choose Subject" ><br>                                            
+                                           <option value="Math">Math</option>
+                                           <option value="Physics">Physics</option>
+                                           <option value="English">English</option>
+                                           <option value="Biology">Biology</option>
+                                           <option value="Chemistry">Chemistry</option>
+                                           <option value="Literature">Literature</option>
+                                            <option value="History">History</option>
+                                               </select>
+                    <select id="Grade" list="Grade" name="Grade" placeholder="Choose your Grade" ><br>                                           
+                                           <option value="9th">9th</option>
+                                           <option value="10th">10th</option>
+                                           <option value="11th">11th</option>
+                                           <option value="12th">12th</option>
+                                               </select>
+                     <input type="submit" value="FILTER"><br><br>
+                     <button id="button"  onclick="GetLocation()"  > The nearest tutor</button>
+                </form>
+            </div>
+             
+            <div>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                            <th>City</th>
+                            <th>Price</th>
+                            <th>Tel</th> 
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Yosi Cohen</th>
+                            <th>Math</th>
+                            <th>10th</th>
+                            <th>Beer sheva</th>
+                            <th>100₪</th>
+                            <th>052-5381648</th> 
+                        </tr>
+                        <th>Daniel Rom</th>
+                            <th>Art</th>
+                            <th>11th</th>
+                            <th>Beer sheva</th>
+                            <th>90₪</th>
+                            <th>054-5383448</th> 
+                        </tr>
+                        <th>Bar Levi</th>
+                            <th>History</th>
+                            <th>11th</th>
+                            <th>Tel aviv</th>
+                            <th>110₪</th>
+                            <th>050-5312348</th> 
+                        </tr>
+                     </tbody>
+                </table>
+           </div>
+                    
+         </div>
+   
+</body>
+</html>

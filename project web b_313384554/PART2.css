@@ -1,0 +1,161 @@
+body{
+    background: #7CB3D8 ;
+    color: whitesmoke;
+    font-family: PART2;
+
+}
+.section{
+    grid-area: from;
+}
+.filter{
+    grid-area: from1;
+}
+.GridCountainer{
+    display: grid;
+    grid-template-areas:
+   'header1 header1'
+   'header2 header2'
+   'form photo3'  ;
+}
+.GridForm{
+    display: grid;
+    grid-template-areas:
+   'header'
+   'form1'
+   'bottom'  ;
+}
+.photo3:hover{
+    animation: bounce 1s linear;
+}
+
+@keyframes bounce{
+    20%, 50%,80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+
+}
+
+.TopAreaContainer1{
+    grid-area: header1;
+}
+.TopAreaContainer{
+    grid-area: header;
+}
+.Header{
+    grid-area: header;  
+    color: whitesmoke;
+    text-align: center;
+   margin-left: 200px;
+    text-shadow: 1.5px 1.5px 8px#000000;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.topAreaGroup{
+    margin-left: 20px;
+
+}
+
+.photo{
+grid-area: photo3 ;
+
+
+}
+
+.container label{
+    font-size: 19px;
+}
+
+.logINForm{
+    grid-area: form;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.logINForm1{
+    grid-area: form1;
+    text-align: center;
+    margin-right: 500px; 
+    }
+
+.container{
+    font-size: 23px;
+}
+
+
+
+.container input{
+    border-radius: 13px; 
+    background-color:antiquewhite;
+    border: 1px solid #000000;
+    width: 200px;
+    height: 30px;
+}
+.button{
+    margin-top: 20px;
+    border-radius: 40px;
+    width: 70px;
+    height: 25px;
+    background-color: #085992;
+    color: whitesmoke;
+}
+
+  
+.heder1{
+    margin-left: 200px;
+ 
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    margin-left: 30px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #085992;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2e0098;
+}
+@font-face {
+    font-family:PART2 ;
+    src: url(JandaManateeSolid.ttf);
+}
+
+.GetMYLocation{
+    margin-left: 290px;
+    border-radius: 40px;
+    width: 130px;
+    height: 25px;
+    background-color: #085992;
+    color: whitesmoke; 
+    
+}
+
+.BackButton{
+    grid-area: bottom;
+     margin-bottom: 20px;
+    margin-left: 670px ; 
+}
