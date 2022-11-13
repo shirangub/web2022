@@ -1,0 +1,32 @@
+extends layout 
+block content
+    form.register(action='/CreateNewUser' method='POST')
+        h1 Sign Up
+        label(for='RegName')
+            b.register Full Name
+        br
+        input(type='text' placeholder='Enter Name' name='name' autocomplete='on' pattern='[a-zA-Z ]{1,40}' required='')
+        br
+        label(for='email')
+            b.register Email
+        br
+        input(type='email' placeholder='Enter Email' name='email' required='' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
+        br
+        label(for='BDay')
+            b.register Date of birth
+        br
+        input(type='date' name='BDay' max='2006-05-29' min='1922-01-01' required='')
+        br
+        label(for='psw')
+            b.register Password
+        br
+        input#pass(type='password' placeholder='Enter Password' name='pass'  title='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters' onkeyup='check1();' required=''  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" )
+        br
+        label(for='psw')
+            b.register Confirm Password
+        br
+        input#Cpass(type='password' placeholder='Enter Password again' name='Cpass' onkeyup='check1()' required='' pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}")
+        br
+        p#matched
+        br
+        input#CreateBuntton.button(type='submit', value='Create')

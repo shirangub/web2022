@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    }
+body{
+    background-color:rgb(236, 125, 208);
+    background-image: url("../static/photos/teacher.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+     background-size:300px;
+
+}
+
+
+.Grid1{
+    display: grid;
+    grid-template-areas: 
+    'nav nav'
+    'heder heder'
+    'text1 photo1'
+    'form photo1';
+}
+
+.navv{
+ grid-area: nav;
+ 
+}
+
+.list{
+    grid-area: text1;
+    margin-left:30% ;
+}
+.form{
+    grid-area: form;
+    margin-left:30% ;
+}
+#heder1{
+    grid-area: heder;
+    margin-left:30% ;
+}

@@ -1,0 +1,24 @@
+extends layout 
+block content
+    form#results(action="http://localhost:3000/Search", method="get")
+        h1#titel  #{var1} 
+        table.styled-table
+            thead
+                tr
+                    th Name
+                    th Subject
+                    th Grade
+                    th City
+                    th Price
+                    th Tel
+
+            each n in pple
+                tr
+                td= n.name 
+                td= n.subject
+                td= n.grade
+                td= n.city
+                td= n.price
+                td= n.tel
+        input#Back.button(type='submit' value='Back to search' style='width: 140px;')
+         

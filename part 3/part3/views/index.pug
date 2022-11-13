@@ -1,0 +1,31 @@
+extends layout 
+block content
+    .Grid
+        .Header
+            h1 MyLesson
+            h4 Join us and find the best tutor for you!
+        img#photo1.photo(src='/photos/male-teacher.png' width='225' )
+        form.logINForm(action='/Search' method='post')
+            label(for='uname')
+            b.register Email
+            br
+            input#uname(type='email' placeholder=' Enter your Email' name='uname' required='')
+            br
+            label(for='psw')
+            b.register Password
+            br
+            input#psw(type='password' placeholder=' Enter Password' name='psw' required='' )
+            br
+            input.checkboxP(type='checkbox' onclick='myfunction()' style='width: 15px;padding: 0;margin:0; vertical-align: bottom; position: relative; top: 5px;\
+            *overflow: hidden;')
+            label( for='showPassword' style='font-size: 15px; position: relative; font-family: "Times New Roman", Times; color: #000000;') Show Password
+            br
+            input#LoginBuntton.button( type='submit' value='Login')
+            h6.question
+            | NEW? 
+            a.question(href='http://localhost:3000/register' style='text-decoration: underline')  Create an account
+        img#photo2.photo(src='/photos/teacher.png' width='270')
+       
+
+    
+        

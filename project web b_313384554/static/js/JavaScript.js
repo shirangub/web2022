@@ -1,6 +1,6 @@
 
 // -----------------------------------nav bar----------------------
-const ActivePage = window.location.pathname;
+var ActivePage = window.location.pathname;
 console.log(ActivePage);
 
 const activeNav = document.querySelectorAll('nav a').forEach(

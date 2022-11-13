@@ -1,0 +1,44 @@
+
+extends layout 
+block content
+    .search
+        h1#mama Find the best tutor for you!
+        form#search(action="/ShowRutorsByCon" method="get") 
+            select#subjects(list='Subjects' name='subjects' placeholder='Choose Subject')
+                br
+                option(value='Math') Math
+                option(value='Physics') Physics
+                option(value='English') English
+                option(value='Biology') Biology
+                option(value='Chemistry') Chemistry
+                option(value='Literature') Literature
+                option(value='History') History
+            select#Grade(list='Grade' name='Grade' placeholder='Choose your Grade')
+                br
+                option(value='9th') 9th
+                option(value='10th') 10th
+                option(value='11th') 11th
+                option(value='12th') 12th
+            input.button(type='submit' value='FILTER')
+       
+
+
+
+        form#searchLoc(action="/NearestTutor" method="get")
+            input#cityy.cityy(type="hidden" name='cityy')
+            br
+            select#subjectss(list='Subjects' name='subjectss' placeholder='Choose Subject' onclick='GetLocation()')
+                br
+                option(value='Math') Math
+                option(value='Physics') Physics
+                option(value='English') English
+                option(value='Biology') Biology
+                option(value='Chemistry') Chemistry
+                option(value='Literature') Literature
+                option(value='History') History
+            
+            input#BTN.button(type='submit' value='Find the nearest tutor' style='width: 140px;')
+        br
+        img.photo4(src="/photos/search.png", width="10%")
+
+    
