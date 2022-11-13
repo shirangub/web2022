@@ -25,7 +25,7 @@ app.use(express.static('static'));//set up for static dir
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug'); 
 
-app.get('/signin', [DBCreation.DropUsersTable, DBCreation.DropTutorsTable, DBCreation.CreateUsers, DBCreation.CreateTutors, DBCreation.InsertDataToUsers, DBCreation.InsertDataToTutors, start]);
+app.get('/', [DBCreation.DropUsersTable, DBCreation.DropTutorsTable, DBCreation.CreateUsers, DBCreation.CreateTutors, DBCreation.InsertDataToUsers, DBCreation.InsertDataToTutors, start]);
 
 //-----------route
 app.get('/signin', (req,res)=>{
